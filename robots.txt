@@ -1,0 +1,31 @@
+# =============================================================================
+# robots.txt — jasabangunrumah.my.id
+# Website Company Profile: Jasa Bangun Rumah (Jasa Bangun Rumah, Arsitek & Kontraktor)
+#
+# Tujuan:
+# 1. Mengizinkan seluruh mesin pencari (Googlebot, Bingbot, dll.) untuk
+#    meng-crawl dan mengindeks seluruh halaman publik situs.
+# 2. Mencegah crawler memasuki direktori/berkas teknis yang tidak relevan
+#    untuk hasil pencarian (aset internal, folder sistem, file duplikat).
+# 3. Mengarahkan crawler ke lokasi sitemap.xml agar proses indexing lebih
+#    efisien dan menyeluruh.
+# =============================================================================
+
+User-agent: *
+Allow: /
+
+# --- Larangan crawling untuk folder/berkas non-konten ---------------------
+# Folder aset murni (CSS/JS) tidak wajib diblokir karena Google butuh
+# me-render halaman secara visual (mobile-friendly test), namun kita
+# tetap membatasi folder sistem/administratif jika ada di kemudian hari.
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /admin/
+Disallow: /includes/
+
+# --- Cegah pengindeksan parameter pencarian/filter internal (jika ada) -----
+Disallow: /*?s=
+Disallow: /*?search=
+
+# --- Lokasi Sitemap ---------------------------------------------------------
+Sitemap: https://jasabangunrumah.my.id/sitemap.xml

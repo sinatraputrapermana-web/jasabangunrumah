@@ -1,0 +1,797 @@
+/* =========================================================================
+   JASA BANGUN RUMAH — Custom Stylesheet
+   Tema: Jasa Bangun Rumah / Design & Build Studio
+   Desain mengacu pada vibe Archimax Indonesia & Emporio Architect:
+   mewah, profesional, tegas, dan menonjolkan visual portofolio.
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   1. DESIGN TOKENS
+   ------------------------------------------------------------------------- */
+:root {
+  /* Palet warna — dominan gelap arsitektural + aksen perunggu (bronze) */
+  --wg-charcoal: #14161a;      /* dasar gelap utama (header, hero, footer) */
+  --wg-charcoal-soft: #1e2126; /* permukaan gelap sekunder (kartu di atas dasar gelap) */
+  --wg-ivory: #f7f4ee;         /* dasar terang / latar section terang */
+  --wg-ivory-soft: #efeae0;    /* latar alternatif terang */
+  --wg-stone: #c9bfae;         /* teks/garis netral di atas dasar gelap */
+  --wg-ink: #2b2a28;           /* teks utama di atas dasar terang */
+  --wg-bronze: #b4863a;        /* aksen utama — perunggu/emas */
+  --wg-bronze-deep: #8c6526;   /* aksen hover / gelap */
+
+  /* Tipografi */
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Jost", "Segoe UI", sans-serif;
+
+  /* Lainnya */
+  --radius-soft: 2px;
+  --shadow-elevated: 0 25px 50px -20px rgba(20, 22, 26, 0.45);
+  --transition-base: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* -------------------------------------------------------------------------
+   2. GLOBAL / BASE
+   ------------------------------------------------------------------------- */
+html { 
+  scroll-behavior: smooth; 
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--wg-ink);
+  background-color: var(--wg-ivory);
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--wg-charcoal);
+  line-height: 1.15;
+}
+
+a { text-decoration: none; }
+
+.section-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--wg-bronze);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.section-heading { max-width: 720px; margin-left: auto; margin-right: auto; }
+
+section { padding: 6rem 0; }
+@media (max-width: 768px) {
+  section { padding: 4rem 0; }
+}
+
+/* Garis pemisah dekoratif ala cetak biru arsitek */
+.wg-divider {
+  width: 64px;
+  height: 2px;
+  background: var(--wg-bronze);
+  border: none;
+  margin: 1.25rem 0;
+}
+.wg-divider.center { margin-left: auto; margin-right: auto; }
+
+/* -------------------------------------------------------------------------
+   3. TOMBOL (BUTTONS)
+   ------------------------------------------------------------------------- */
+.btn { border-radius: var(--radius-soft); padding: 0.75rem 1.75rem; font-weight: 500; letter-spacing: 0.03em; transition: var(--transition-base); }
+
+.btn-bronze {
+  background-color: var(--wg-bronze);
+  border: 1px solid var(--wg-bronze);
+  color: #fff;
+}
+.btn-bronze:hover, .btn-bronze:focus {
+  background-color: var(--wg-bronze-deep);
+  border-color: var(--wg-bronze-deep);
+  color: #fff;
+}
+
+.btn-outline-light:hover { color: var(--wg-charcoal); }
+
+.btn-outline-dark {
+  border-color: var(--wg-charcoal);
+  color: var(--wg-charcoal);
+}
+.btn-outline-dark:hover {
+  background-color: var(--wg-charcoal);
+  border-color: var(--wg-charcoal);
+}
+
+/* -------------------------------------------------------------------------
+   4. NAVBAR
+   ------------------------------------------------------------------------- */
+#mainNav {
+  padding: 1.25rem 0;
+  background-color: transparent;
+  transition: var(--transition-base);
+  transform: translateY(0);
+}
+#mainNav.navbar-scrolled {
+  padding: 0.75rem 0;
+  background-color: var(--wg-charcoal);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  transform: translateY(-5px);
+}
+
+.navbar-brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.35rem;
+  letter-spacing: 0.08em;
+  color: #fff !important;
+}
+.navbar-brand span { color: var(--wg-bronze); }
+
+#mainNav .nav-link {
+  color: var(--wg-stone) !important;
+  font-size: 0.92rem;
+  letter-spacing: 0.03em;
+  padding: 0.5rem 1rem !important;
+  transition: var(--transition-base);
+}
+#mainNav .nav-link:hover,
+#mainNav .nav-link:focus,
+#mainNav .nav-link.active {
+  color: #fff !important;
+}
+
+#mainNav .dropdown-menu {
+  background-color: var(--wg-charcoal-soft);
+  border: none;
+  border-top: 2px solid var(--wg-bronze);
+  border-radius: 0;
+  padding: 0.5rem 0;
+  box-shadow: var(--shadow-elevated);
+}
+#mainNav .dropdown-item {
+  color: var(--wg-stone);
+  font-size: 0.9rem;
+  padding: 0.6rem 1.5rem;
+}
+#mainNav .dropdown-item:hover,
+#mainNav .dropdown-item:focus {
+  background-color: transparent;
+  color: var(--wg-bronze);
+}
+
+@media (max-width: 991.98px) {
+  #mainNav .navbar-collapse {
+    background-color: var(--wg-charcoal);
+    padding: 1rem;
+    border-radius: var(--radius-soft);
+    margin-top: 1rem;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   5. HERO SECTION
+   ------------------------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920&auto=format&fit=crop") center center / cover no-repeat fixed;
+  isolation: isolate;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20,22,26,0.75) 0%, rgba(20,22,26,0.55) 45%, rgba(20,22,26,0.92) 100%);
+  z-index: -1;
+}
+
+.hero-content { color: #fff; max-width: 780px; padding-top: 4rem; }
+
+.hero-eyebrow {
+  color: var(--wg-bronze);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+.hero-title {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+.hero-title em { color: var(--wg-bronze); font-style: normal; }
+
+.hero-desc {
+  font-size: 1.05rem;
+  color: var(--wg-stone);
+  margin-bottom: 2.25rem;
+  max-width: 620px;
+}
+
+.hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+@media (max-width: 767.98px) {
+  .hero-cta {
+    flex-direction: column;
+  }
+  .hero-cta .btn {
+    width: 100%;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   6. BINGKAI FOTO BERGAYA CETAK BIRU (SIGNATURE ELEMENT)
+   Sudut siku-siku emas pada gambar — merepresentasikan garis gambar
+   arsitektur / blueprint corner marks.
+   ------------------------------------------------------------------------- */
+.wg-frame {
+  position: relative;
+  padding: 14px;
+}
+.wg-frame::before,
+.wg-frame::after,
+.wg-frame img { display: block; }
+.wg-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+.wg-frame::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-top: 2px solid var(--wg-bronze);
+  border-left: 2px solid var(--wg-bronze);
+  width: 36px;
+  height: 36px;
+}
+.wg-frame::after {
+  content: "";
+  position: absolute;
+  bottom: 0; right: 0;
+  border-bottom: 2px solid var(--wg-bronze);
+  border-right: 2px solid var(--wg-bronze);
+  width: 36px;
+  height: 36px;
+}
+
+/* -------------------------------------------------------------------------
+   7. ABOUT / KEUNGGULAN SECTION
+   ------------------------------------------------------------------------- */
+.about-section { background-color: var(--wg-ivory); }
+
+.feature-item { display: flex; gap: 1rem; align-items: flex-start; }
+.feature-icon {
+  flex-shrink: 0;
+  width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--wg-bronze);
+  color: var(--wg-bronze);
+  font-size: 1.25rem;
+  border-radius: 50%;
+}
+.feature-item h3 { font-size: 1.05rem; margin-bottom: 0.35rem; }
+.feature-item p { font-size: 0.92rem; color: #5c5a56; margin: 0; }
+
+/* -------------------------------------------------------------------------
+   8. LAYANAN (SERVICES)
+   ------------------------------------------------------------------------- */
+.services-section { background-color: var(--wg-charcoal); color: var(--wg-stone); }
+.services-section .section-title,
+.services-section h1 { color: #fff; }
+.services-section .section-heading p { color: var(--wg-stone); }
+
+.service-card {
+  background-color: var(--wg-charcoal-soft);
+  border: 1px solid rgba(201, 191, 174, 0.12);
+  padding: 2.5rem 2rem;
+  height: 100%;
+  transition: var(--transition-base);
+}
+.service-card:hover {
+  border-color: var(--wg-bronze);
+  transform: translateY(-6px);
+}
+.service-card .service-icon {
+  font-size: 1.75rem;
+  color: var(--wg-bronze);
+  margin-bottom: 1.25rem;
+}
+.service-card h3 { color: #fff; font-size: 1.15rem; margin-bottom: 0.75rem; }
+.service-card p { font-size: 0.9rem; color: var(--wg-stone); margin-bottom: 1.25rem; }
+.service-card .service-link { color: var(--wg-bronze); font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; }
+.service-card .service-link i { transition: var(--transition-base); }
+.service-card:hover .service-link i { transform: translateX(4px); }
+
+/* -------------------------------------------------------------------------
+   9. STATISTIK
+   ------------------------------------------------------------------------- */
+.stats-section { background-color: var(--wg-ivory-soft); padding: 3.5rem 0; }
+.stat-item .stat-number {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--wg-bronze);
+  font-weight: 600;
+}
+.stat-item .stat-label { font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; color: #6b6863; }
+
+/* -------------------------------------------------------------------------
+   10. PORTOFOLIO / GALERI
+   ------------------------------------------------------------------------- */
+.portfolio-item { overflow: hidden; }
+.portfolio-item .wg-frame { padding: 0; }
+.portfolio-item .wg-frame::before, .portfolio-item .wg-frame::after { display: none; }
+.portfolio-item img {
+  height: 280px;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.portfolio-item:hover img { transform: scale(1.06); }
+.portfolio-caption { padding-top: 1rem; }
+.portfolio-caption .category {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--wg-bronze);
+}
+.portfolio-caption h3 { font-size: 1.1rem; margin: 0.25rem 0 0; }
+
+/* -------------------------------------------------------------------------
+   11. PROSES KERJA
+   ------------------------------------------------------------------------- */
+.process-section { background-color: var(--wg-charcoal); color: var(--wg-stone); }
+.process-step { position: relative; padding-left: 0; }
+.process-step .step-number {
+  font-family: var(--font-display);
+  font-size: 2.75rem;
+  color: rgba(180, 134, 58, 0.35);
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+.process-step h3 { color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem; }
+.process-step p { font-size: 0.9rem; color: var(--wg-stone); }
+
+/* -------------------------------------------------------------------------
+   12. TESTIMONI
+   ------------------------------------------------------------------------- */
+.testimonial-section { background-color: var(--wg-ivory); }
+.testimonial-card {
+  background-color: #fff;
+  border: 1px solid #e7e1d5;
+  padding: 2.5rem;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.testimonial-card i.bi-quote { font-size: 2rem; color: var(--wg-bronze); }
+.testimonial-card p.quote { font-size: 1.1rem; font-style: italic; color: var(--wg-ink); margin: 1.25rem 0; }
+.testimonial-card .client-name { font-weight: 600; font-family: var(--font-display); }
+.testimonial-card .client-role { font-size: 0.85rem; color: #6b6863; }
+
+.carousel-indicators [data-bs-target] { background-color: var(--wg-bronze); }
+
+/* -------------------------------------------------------------------------
+   13. BLOG PREVIEW
+   ------------------------------------------------------------------------- */
+.blog-card { 
+  border: none; 
+  transition: var(--transition-base);
+  border-radius: var(--radius-soft);
+  overflow: hidden;
+}
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(20, 22, 26, 0.1);
+}
+.blog-card img { 
+  height: 220px; 
+  object-fit: cover; 
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-card:hover img {
+  transform: scale(1.05);
+}
+.blog-card .blog-meta { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--wg-bronze); }
+.blog-card h3 { font-size: 1.1rem; margin: 0.5rem 0 0.75rem; transition: var(--transition-base); }
+.blog-card:hover h3 { color: var(--wg-bronze); }
+.blog-card p { font-size: 0.9rem; color: #5c5a56; }
+.blog-card a.read-more { 
+  font-size: 0.85rem; 
+  color: var(--wg-charcoal); 
+  font-weight: 500; 
+  transition: var(--transition-base); 
+  text-decoration: underline;
+  text-decoration-color: var(--wg-bronze);
+  text-underline-offset: 4px;
+}
+.blog-card:hover a.read-more { color: var(--wg-bronze); }
+
+/* -------------------------------------------------------------------------
+   14. CTA SECTION
+   ------------------------------------------------------------------------- */
+.cta-section {
+  background: linear-gradient(rgba(20,22,26,0.88), rgba(20,22,26,0.88)), url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1920&auto=format&fit=crop") center / cover no-repeat;
+  color: #fff;
+  text-align: center;
+}
+.cta-section .section-title { color: #fff; }
+.cta-section p { color: var(--wg-stone); max-width: 600px; margin: 0 auto 2rem; }
+.cta-contacts { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2.5rem; font-size: 0.92rem; }
+.cta-contacts a { color: var(--wg-stone); }
+.cta-contacts i { color: var(--wg-bronze); margin-right: 0.4rem; }
+
+/* -------------------------------------------------------------------------
+   15. FOOTER
+   ------------------------------------------------------------------------- */
+.site-footer { background-color: var(--wg-charcoal); color: var(--wg-stone); padding-top: 5rem; }
+.site-footer h4 { color: #fff; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; }
+.site-footer .footer-brand { font-family: var(--font-display); color: #fff; font-size: 1.3rem; letter-spacing: 0.08em; }
+.site-footer .footer-brand span { color: var(--wg-bronze); }
+.site-footer p, .site-footer address { font-size: 0.9rem; }
+.site-footer ul { list-style: none; padding: 0; margin: 0; }
+.site-footer ul li { margin-bottom: 0.65rem; }
+.site-footer ul li a { color: var(--wg-stone); font-size: 0.9rem; transition: var(--transition-base); }
+.site-footer ul li a:hover { color: var(--wg-bronze); padding-left: 4px; }
+.site-footer address a { color: var(--wg-stone); font-size: 0.9rem; transition: var(--transition-base); }
+.site-footer address a:hover { color: var(--wg-bronze); }
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px; height: 38px;
+  border: 1px solid rgba(201,191,174,0.3);
+  color: var(--wg-stone);
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  transition: var(--transition-base);
+}
+.footer-social a:hover { border-color: var(--wg-bronze); color: var(--wg-bronze); }
+
+.site-footer hr { border-color: rgba(201,191,174,0.15); margin: 3rem 0 1.5rem; }
+.footer-bottom { font-size: 0.82rem; color: #8b887f; padding-bottom: 1.5rem; }
+.footer-bottom a { color: #8b887f; }
+.footer-bottom a:hover { color: var(--wg-bronze); }
+
+/* -------------------------------------------------------------------------
+   16b. PAGE BANNER (halaman dalam: Tentang, Layanan, Galeri, Blog)
+   ------------------------------------------------------------------------- */
+.page-banner {
+  position: relative;
+  min-height: 42vh;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 3rem;
+  padding-top: 8rem;
+  background-color: var(--wg-charcoal);
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+}
+.page-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20,22,26,0.8) 0%, rgba(20,22,26,0.92) 100%);
+  z-index: -1;
+}
+.page-banner-title {
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 0.75rem;
+}
+
+.breadcrumb { margin-bottom: 0; }
+.breadcrumb-item, .breadcrumb-item a { color: var(--wg-stone); font-size: 0.85rem; }
+.breadcrumb-item.active { color: var(--wg-bronze); }
+.breadcrumb-item + .breadcrumb-item::before { color: var(--wg-stone); }
+
+/* -------------------------------------------------------------------------
+   16c. FAQ ACCORDION
+   ------------------------------------------------------------------------- */
+.wg-accordion .accordion-item {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #e7e1d5;
+}
+.wg-accordion .accordion-button {
+  background-color: transparent;
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--wg-charcoal);
+  padding: 1.5rem 0.5rem;
+  box-shadow: none;
+}
+.wg-accordion .accordion-button:not(.collapsed) { color: var(--wg-bronze); }
+.wg-accordion .accordion-button:focus { box-shadow: none; }
+.wg-accordion .accordion-button::after { flex-shrink: 0; }
+.wg-accordion .accordion-body { padding: 0 0.5rem 1.75rem; color: #5c5a56; }
+
+/* -------------------------------------------------------------------------
+   16d. FILTER GALERI
+   ------------------------------------------------------------------------- */
+.gallery-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+.gallery-filter .filter-btn {
+  border: 1px solid var(--wg-charcoal);
+  background: transparent;
+  color: var(--wg-charcoal);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-soft);
+  transition: var(--transition-base);
+}
+.gallery-filter .filter-btn:hover { border-color: var(--wg-bronze); color: var(--wg-bronze); }
+.gallery-filter .filter-btn.active { background-color: var(--wg-charcoal); color: #fff; }
+
+.gallery-grid .portfolio-item { cursor: pointer; }
+.gallery-grid .portfolio-item .wg-view {
+  position: absolute;
+  inset: 0;
+  background: rgba(20,22,26,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition-base);
+  color: #fff;
+  font-size: 1.5rem;
+}
+.gallery-grid .portfolio-item { position: relative; }
+.gallery-grid .portfolio-item:hover .wg-view { opacity: 1; }
+
+.gallery-modal .modal-content { background-color: var(--wg-charcoal); border: none; border-radius: 0; }
+.gallery-modal .modal-header { border-bottom: 1px solid rgba(201,191,174,0.15); }
+.gallery-modal .modal-title { color: #fff; font-family: var(--font-display); }
+.gallery-modal .btn-close { filter: invert(1); }
+
+/* -------------------------------------------------------------------------
+   16e. LIST LAYANAN (halaman detail layanan)
+   ------------------------------------------------------------------------- */
+.wg-check-list { list-style: none; padding: 0; margin: 0; }
+.wg-check-list li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.6rem 0;
+  border-bottom: 1px dashed #e2dccd;
+}
+.wg-check-list li:last-child { border-bottom: none; }
+.wg-check-list i { color: var(--wg-bronze); margin-top: 0.2rem; }
+
+.related-service-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(201,191,174,0.3);
+  color: var(--wg-stone);
+  padding: 0.5rem 1.1rem;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  transition: var(--transition-base);
+}
+.related-service-pill:hover { border-color: var(--wg-bronze); color: var(--wg-bronze); }
+.related-service-pill.active { background-color: var(--wg-bronze); color: #fff; border-color: var(--wg-bronze); }
+
+/* -------------------------------------------------------------------------
+   16f. ARTIKEL BLOG (halaman daftar & detail)
+   ------------------------------------------------------------------------- */
+.blog-list-card { border: none; border-bottom: 1px solid #e7e1d5; padding-bottom: 2.5rem; margin-bottom: 2.5rem; }
+.blog-list-card img { object-fit: cover; height: 100%; min-height: 220px; }
+.blog-list-card a.read-more {
+  font-size: 0.85rem;
+  color: var(--wg-charcoal);
+  font-weight: 500;
+  transition: var(--transition-base);
+}
+.blog-list-card:hover a.read-more { color: var(--wg-bronze); }
+
+.pagination .page-link {
+  color: var(--wg-charcoal);
+  border: 1px solid #e2dccd;
+  margin: 0 3px;
+  border-radius: var(--radius-soft);
+}
+.pagination .page-item.active .page-link { background-color: var(--wg-bronze); border-color: var(--wg-bronze); }
+
+/* Artikel Detail */
+.article-header .blog-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 0.85rem;
+  color: #6b6863;
+  margin: 1.25rem 0 2rem;
+}
+.article-header .blog-meta-row i { color: var(--wg-bronze); margin-right: 0.35rem; }
+
+.article-cover { margin-bottom: 2.5rem; }
+.article-cover img { width: 100%; max-height: 480px; object-fit: cover; }
+
+.article-body { font-size: 1.02rem; line-height: 1.85; color: #3a3835; max-width: 800px; margin: 0 auto; }
+.article-body h2 { font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+.article-body h3 { font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.75rem; }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body ul, .article-body ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+.article-body li { margin-bottom: 0.5rem; }
+.article-body blockquote {
+  border-left: 3px solid var(--wg-bronze);
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  font-style: italic;
+  color: var(--wg-ink);
+  margin: 2rem 0;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+
+.article-tags { max-width: 800px; margin: 2.5rem auto 0; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.article-tags a {
+  font-size: 0.8rem;
+  border: 1px solid #e2dccd;
+  color: #5c5a56;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+}
+.article-tags a:hover { border-color: var(--wg-bronze); color: var(--wg-bronze); }
+
+.author-box {
+  max-width: 800px;
+  margin: 3rem auto 0;
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  background-color: var(--wg-ivory-soft);
+  padding: 1.75rem;
+}
+.author-box img { width: 64px; height: 64px; object-fit: cover; border-radius: 50%; }
+.author-box h4 { font-size: 1rem; margin-bottom: 0.2rem; color: var(--wg-charcoal); font-family: var(--font-display); }
+.author-box p { font-size: 0.88rem; color: #5c5a56; margin: 0; }
+
+/* Table of Contents & Baca Juga */
+.toc-box {
+  background-color: var(--wg-ivory-soft);
+  border-left: 3px solid var(--wg-bronze);
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+.toc-box h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-display);
+}
+.toc-box ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.toc-box ul li {
+  margin-bottom: 0.5rem;
+}
+.toc-box ul li a {
+  color: var(--wg-charcoal);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: var(--transition-base);
+}
+.toc-box ul li a:hover {
+  color: var(--wg-bronze);
+  padding-left: 4px;
+}
+
+.baca-juga-inline {
+  background-color: #fff;
+  border: 1px solid #e7e1d5;
+  padding: 1.25rem;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: var(--radius-soft);
+}
+.baca-juga-inline i {
+  font-size: 1.5rem;
+  color: var(--wg-bronze);
+}
+.baca-juga-inline p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.baca-juga-inline a {
+  color: var(--wg-charcoal);
+  text-decoration: underline;
+  text-decoration-color: var(--wg-bronze);
+  text-underline-offset: 4px;
+}
+.baca-juga-inline a:hover {
+  color: var(--wg-bronze);
+}
+
+/* -------------------------------------------------------------------------
+   16. AKSESIBILITAS
+   ------------------------------------------------------------------------- */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid var(--wg-bronze);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-scroll-indicator { animation: none; }
+  .portfolio-item img { transition: none; }
+}
+
+/* -------------------------------------------------------------------------
+   17. FLOATING BUTTONS (WhatsApp & Back to Top)
+   ------------------------------------------------------------------------- */
+.floating-wa {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: var(--transition-base);
+}
+.floating-wa:hover {
+  background-color: #128C7E;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  background-color: var(--wg-charcoal);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-base);
+}
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+.back-to-top:hover {
+  background-color: var(--wg-bronze);
+  color: #fff;
+  transform: translateY(-3px);
+}
