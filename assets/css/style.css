@@ -138,6 +138,11 @@ section { padding: 6rem 0; }
   letter-spacing: 0.08em;
   color: #fff !important;
 }
+@media (max-width: 991.98px) {
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+}
 .navbar-brand span { color: var(--wg-bronze); }
 
 #mainNav .nav-link {
@@ -190,7 +195,7 @@ section { padding: 6rem 0; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920&auto=format&fit=crop") center center / cover no-repeat fixed;
+  background: url("../img/hero.webp") center center / cover no-repeat fixed;
   isolation: isolate;
 }
 
@@ -428,7 +433,7 @@ section { padding: 6rem 0; }
    14. CTA SECTION
    ------------------------------------------------------------------------- */
 .cta-section {
-  background: linear-gradient(rgba(20,22,26,0.88), rgba(20,22,26,0.88)), url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1920&auto=format&fit=crop") center / cover no-repeat;
+  background: linear-gradient(rgba(20,22,26,0.88), rgba(20,22,26,0.88)), url("../img/cta.webp") center / cover no-repeat;
   color: #fff;
   text-align: center;
 }
@@ -640,7 +645,7 @@ section { padding: 6rem 0; }
 
 .article-body { font-size: 1.02rem; line-height: 1.85; color: #3a3835; max-width: 800px; margin: 0 auto; }
 @media (max-width: 768px) {
-  .article-body { padding: 0 1rem; }
+  .article-body { padding: 0; }
 }
 .article-body h2 { font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; }
 .article-body h3 { font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.75rem; }
