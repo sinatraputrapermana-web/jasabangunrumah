@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Beranda -->
+  <url>
+    <loc>https://jasabangunrumah.my.id/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Tentang -->
+  <url>
+    <loc>https://jasabangunrumah.my.id/tentang.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Layanan: Jasa Arsitek -->
+  <url>
+    <loc>https://jasabangunrumah.my.id/layanan/jasa-arsitek.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Layanan: Jasa Kontraktor Rumah -->
+  <url>
+    <loc>https://jasabangunrumah.my.id/layanan/jasa-kontraktor-rumah.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Layanan: Jasa Kontraktor Bangunan -->
+  <url>
+    <loc>https://jasabangunrumah.my.id/layanan/jasa-kontraktor-bangunan.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Layanan: Jasa Renovasi Bangunan/Gedung -->
+  <url>
+    <loc>https://jasabangunrumah.my.id/layanan/jasa-renovasi-bangunan-gedung.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Layanan: Jasa Desain Interior -->
+  <url>
+    <loc>https://jasabangunrumah.my.id/layanan/jasa-desain-interior.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Layanan: Lainnya -->
+  <url>
+    <loc>https://jasabangunrumah.my.id/layanan/lainnya.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Galeri -->
+  <url>
+    <loc>https://jasabangunrumah.my.id/galeri.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://jasabangunrumah.my.id/blog.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog: Detail Artikel -->
+  <url>
+    <loc>https://jasabangunrumah.my.id/blog/jasa-arsitek-rumah-profesional.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://jasabangunrumah.my.id/blog/biaya-jasa-arsitek-rumah.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://jasabangunrumah.my.id/blog/inspirasi-desain-arsitektur-modern-minimalis.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://jasabangunrumah.my.id/blog/persiapan-konsultasi-jasa-arsitek.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
