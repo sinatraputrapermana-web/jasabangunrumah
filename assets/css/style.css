@@ -294,7 +294,7 @@ section { padding: 6rem 0; }
   border-radius: 50%;
 }
 .feature-item h3 { font-size: 1.05rem; margin-bottom: 0.35rem; }
-.feature-item p { font-size: 0.92rem; color: #5c5a56; margin: 0; }
+.feature-item p { font-size: 0.92rem; color: #4a4845; margin: 0; }
 
 /* -------------------------------------------------------------------------
    8. LAYANAN (SERVICES)
@@ -336,7 +336,7 @@ section { padding: 6rem 0; }
   color: var(--wg-bronze);
   font-weight: 600;
 }
-.stat-item .stat-label { font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; color: #6b6863; }
+.stat-item .stat-label { font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; color: #4a4845; }
 
 /* -------------------------------------------------------------------------
    10. PORTOFOLIO / GALERI
@@ -389,7 +389,7 @@ section { padding: 6rem 0; }
 .testimonial-card i.bi-quote { font-size: 2rem; color: var(--wg-bronze); }
 .testimonial-card p.quote { font-size: 1.1rem; font-style: italic; color: var(--wg-ink); margin: 1.25rem 0; }
 .testimonial-card .client-name { font-weight: 600; font-family: var(--font-display); }
-.testimonial-card .client-role { font-size: 0.85rem; color: #6b6863; }
+.testimonial-card .client-role { font-size: 0.85rem; color: #4a4845; }
 
 .carousel-indicators [data-bs-target] { background-color: var(--wg-bronze); }
 
@@ -417,7 +417,7 @@ section { padding: 6rem 0; }
 .blog-card .blog-meta { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--wg-bronze); }
 .blog-card h3 { font-size: 1.1rem; margin: 0.5rem 0 0.75rem; transition: var(--transition-base); }
 .blog-card:hover h3 { color: var(--wg-bronze); }
-.blog-card p { font-size: 0.9rem; color: #5c5a56; }
+.blog-card p { font-size: 0.9rem; color: #4a4845; }
 .blog-card a.read-more { 
   font-size: 0.85rem; 
   color: var(--wg-charcoal); 
@@ -450,7 +450,9 @@ section { padding: 6rem 0; }
    15. FOOTER
    ------------------------------------------------------------------------- */
 .site-footer { background-color: var(--wg-charcoal); color: var(--wg-stone); padding-top: 5rem; overflow-x: hidden; }
-.site-footer h4 { color: #fff; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; }
+.site-footer h2 { color: #fff; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; }
+/* Footer nav headings — styled as h4 visually but h2 semantically */
+.site-footer .footer-nav-heading { color: #fff; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; }
 .site-footer .footer-brand { font-family: var(--font-display); color: #fff; font-size: 1.3rem; letter-spacing: 0.08em; }
 .site-footer .footer-brand span { color: var(--wg-bronze); }
 .site-footer p, .site-footer address { font-size: 0.9rem; }
@@ -475,9 +477,24 @@ section { padding: 6rem 0; }
 .footer-social a:hover { border-color: var(--wg-bronze); color: var(--wg-bronze); }
 
 .site-footer hr { border-color: rgba(201,191,174,0.15); margin: 3rem 0 1.5rem; }
-.footer-bottom { font-size: 0.82rem; color: #8b887f; padding-bottom: 1.5rem; }
-.footer-bottom a { color: #8b887f; }
+.footer-bottom { font-size: 0.82rem; color: #6b6863; padding-bottom: 1.5rem; }
+.footer-bottom a { color: #6b6863; }
 .footer-bottom a:hover { color: var(--wg-bronze); }
+
+/* Touch targets — min 44x44px untuk aksesibilitas mobile */
+.cta-contacts a,
+.cta-contacts span {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.25rem;
+}
+
+.floating-wa,
+.back-to-top {
+  min-width: 48px;
+  min-height: 48px;
+}
 
 /* -------------------------------------------------------------------------
    16b. PAGE BANNER (halaman dalam: Tentang, Layanan, Galeri, Blog)

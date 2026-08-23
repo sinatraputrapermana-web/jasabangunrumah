@@ -35,16 +35,23 @@
   <!-- Preconnect & Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Google Fonts: non-render-blocking via print media trick -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
 
   <!-- Bootstrap 5 CSS (CDN) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"></noscript>
 
-  <!-- Bootstrap Icons (CDN) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- Bootstrap Icons (CDN) — non-render-blocking -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"></noscript>
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Preload LCP hero image -->
+  <link rel="preload" as="image" href="assets/img/hero.webp" fetchpriority="high">
 
   <!-- Data Terstruktur (Schema.org) — membantu Google memahami jenis bisnis -->
   <script type="application/ld+json">
@@ -58,7 +65,9 @@
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Jakarta",
+      "streetAddress": "Jl. Arsitektur Raya No. 88",
+      "addressLocality": "Jakarta Selatan",
+      "postalCode": "12560",
       "addressCountry": "ID"
     },
     "areaServed": "ID",
@@ -151,8 +160,8 @@
         </p>
 
         <div class="hero-cta">
-          <a href="#kontak" class="btn btn-bronze btn-lg">Konsultasi Gratis Sekarang</a>
-          <a href="galeri.html" class="btn btn-outline-light btn-lg">Lihat Portofolio Kami</a>
+          <a href="#kontak" class="btn btn-bronze btn-lg" aria-label="Konsultasi Gratis Sekarang">Konsultasi Gratis Sekarang</a>
+          <a href="galeri.html" class="btn btn-outline-light btn-lg" aria-label="Lihat Portofolio Kami">Lihat Portofolio Kami</a>
         </div>
       </div>
     </section>
@@ -167,6 +176,8 @@
           <div class="col-lg-6">
             <div class="wg-frame">
               <img src="assets/img/section-about.webp"
+                   srcset="assets/img/section-about.webp 1000w"
+                   sizes="(max-width: 576px) 100vw, (max-width: 992px) 50vw, 400px"
                    alt="Tim arsitek Jasa Bangun Rumah sedang meninjau gambar kerja di lokasi proyek"
                    class="img-fluid" loading="lazy" width="1000" height="1250">
             </div>
@@ -253,7 +264,7 @@
               <div class="service-icon"><i class="bi bi-pencil-square"></i></div>
               <h3>Jasa Arsitek</h3>
               <p>Perancangan desain rumah dan bangunan yang fungsional, estetis, dan sesuai kebutuhan lahan Anda.</p>
-              <a href="layanan/jasa-arsitek.html" class="service-link">Selengkapnya <i class="bi bi-arrow-right"></i></a>
+              <a href="layanan/jasa-arsitek.html" class="service-link" aria-label="Selengkapnya tentang Jasa Arsitek">Selengkapnya <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
             </div>
           </article>
 
@@ -262,7 +273,7 @@
               <div class="service-icon"><i class="bi bi-house-gear"></i></div>
               <h3>Jasa Kontraktor Rumah</h3>
               <p>Pembangunan rumah tinggal dari nol dengan manajemen proyek yang rapi dan material berkualitas.</p>
-              <a href="layanan/jasa-kontraktor-rumah.html" class="service-link">Selengkapnya <i class="bi bi-arrow-right"></i></a>
+              <a href="layanan/jasa-kontraktor-rumah.html" class="service-link" aria-label="Selengkapnya tentang Jasa Kontraktor Rumah">Selengkapnya <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
             </div>
           </article>
 
@@ -271,7 +282,7 @@
               <div class="service-icon"><i class="bi bi-buildings"></i></div>
               <h3>Jasa Kontraktor Bangunan</h3>
               <p>Konstruksi bangunan komersial, ruko, dan gedung bertingkat dengan standar keselamatan tinggi.</p>
-              <a href="layanan/jasa-kontraktor-bangunan.html" class="service-link">Selengkapnya <i class="bi bi-arrow-right"></i></a>
+              <a href="layanan/jasa-kontraktor-bangunan.html" class="service-link" aria-label="Selengkapnya tentang Jasa Kontraktor Bangunan">Selengkapnya <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
             </div>
           </article>
 
@@ -280,7 +291,7 @@
               <div class="service-icon"><i class="bi bi-hammer"></i></div>
               <h3>Jasa Renovasi Bangunan/Gedung</h3>
               <p>Perbaikan dan pembaruan tampilan maupun struktur bangunan lama agar kembali optimal dan bernilai.</p>
-              <a href="layanan/jasa-renovasi-bangunan-gedung.html" class="service-link">Selengkapnya <i class="bi bi-arrow-right"></i></a>
+              <a href="layanan/jasa-renovasi-bangunan-gedung.html" class="service-link" aria-label="Selengkapnya tentang Jasa Renovasi Bangunan">Selengkapnya <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
             </div>
           </article>
 
@@ -289,7 +300,7 @@
               <div class="service-icon"><i class="bi bi-palette"></i></div>
               <h3>Jasa Desain Interior</h3>
               <p>Penataan ruang dalam yang nyaman, estetis, dan mencerminkan karakter penghuninya.</p>
-              <a href="layanan/jasa-desain-interior.html" class="service-link">Selengkapnya <i class="bi bi-arrow-right"></i></a>
+              <a href="layanan/jasa-desain-interior.html" class="service-link" aria-label="Selengkapnya tentang Jasa Desain Interior">Selengkapnya <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
             </div>
           </article>
 
@@ -298,7 +309,7 @@
               <div class="service-icon"><i class="bi bi-grid-3x3-gap"></i></div>
               <h3>Layanan Lainnya</h3>
               <p>Konsultasi struktur, pengurusan IMB/PBG, hingga pengawasan proyek — sesuai kebutuhan spesifik Anda.</p>
-              <a href="layanan/lainnya.html" class="service-link">Selengkapnya <i class="bi bi-arrow-right"></i></a>
+              <a href="layanan/lainnya.html" class="service-link" aria-label="Selengkapnya tentang Layanan Lainnya">Selengkapnya <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
             </div>
           </article>
 
@@ -606,7 +617,7 @@
         </div>
 
         <div class="col-lg-2 col-6">
-          <h4>Navigasi</h4>
+          <h2 class="footer-nav-heading">Navigasi</h2>
           <ul>
             <li><a href="index.html">Beranda</a></li>
             <li><a href="tentang.html">Tentang</a></li>
@@ -616,7 +627,7 @@
         </div>
 
         <div class="col-lg-3 col-6">
-          <h4>Layanan</h4>
+          <h2 class="footer-nav-heading">Layanan</h2>
           <ul>
             <li><a href="layanan/jasa-arsitek.html">Jasa Arsitek</a></li>
             <li><a href="layanan/jasa-kontraktor-rumah.html">Kontraktor Rumah</a></li>
@@ -627,12 +638,12 @@
         </div>
 
         <div class="col-lg-3">
-          <h4>Kontak</h4>
+          <h2 class="footer-nav-heading">Kontak</h2>
           <address>
             Jl. Arsitektur Raya No. 88,<br>
             Jakarta Selatan, Indonesia<br><br>
-            <a href="https://wa.me/6288989643555" target="_blank" rel="noopener">0889-8964-3555</a><br>
-            <a href="mailto:info@jasabangunrumah.my.id">info@jasabangunrumah.my.id</a>
+            <a href="https://wa.me/6288989643555" target="_blank" rel="noopener" aria-label="Hubungi via WhatsApp 0889-8964-3555">0889-8964-3555</a><br>
+            <a href="mailto:info@jasabangunrumah.my.id" aria-label="Kirim email ke info@jasabangunrumah.my.id">info@jasabangunrumah.my.id</a>
           </address>
         </div>
 
@@ -657,9 +668,9 @@
     <i class="bi bi-arrow-up"></i>
   </a>
 
-  <!-- Bootstrap 5 JS Bundle (CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap 5 JS Bundle (CDN) — deferred agar tidak blokir render -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
   <!-- Custom JS -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

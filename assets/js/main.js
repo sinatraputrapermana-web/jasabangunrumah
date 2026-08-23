@@ -5,23 +5,29 @@
  */
 document.addEventListener("DOMContentLoaded", function () {
   var mainNav = document.getElementById("mainNav");
+  var isMenuOpen = false;
 
   function toggleNavbarBackground() {
-    if (window.scrollY > 60 || mainNav.classList.contains("menu-open")) {
+    // Baca scrollY sekali untuk menghindari forced reflow berulang
+    var scrolled = window.scrollY > 60 || isMenuOpen;
+    var hasClass = mainNav.classList.contains("navbar-scrolled");
+    // Hanya ubah DOM jika state benar-benar berubah
+    if (scrolled && !hasClass) {
       mainNav.classList.add("navbar-scrolled");
-    } else {
+    } else if (!scrolled && hasClass) {
       mainNav.classList.remove("navbar-scrolled");
     }
   }
 
   // Jalankan sekali saat load, lalu setiap kali user scroll
   toggleNavbarBackground();
-  window.addEventListener("scroll", toggleNavbarBackground);
+  window.addEventListener("scroll", toggleNavbarBackground, { passive: true });
 
   // Tambahkan background saat menu mobile dibuka
   var navbarToggler = document.querySelector(".navbar-toggler");
   if (navbarToggler) {
     navbarToggler.addEventListener("click", function () {
+      isMenuOpen = !isMenuOpen;
       mainNav.classList.toggle("menu-open");
       toggleNavbarBackground();
     });
@@ -38,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         backToTopBtn.classList.remove("show");
       }
-    });
+    }, { passive: true });
 
     backToTopBtn.addEventListener("click", function (e) {
       e.preventDefault();
