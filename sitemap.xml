@@ -11,7 +11,7 @@
 
   <!-- Tentang -->
   <url>
-    <loc>https://jasabangunrumah.my.id/tentang.html</loc>
+    <loc>https://jasabangunrumah.my.id/tentang</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -19,7 +19,7 @@
 
   <!-- Layanan: Jasa Arsitek -->
   <url>
-    <loc>https://jasabangunrumah.my.id/layanan/jasa-arsitek.html</loc>
+    <loc>https://jasabangunrumah.my.id/layanan/jasa-arsitek</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -27,7 +27,7 @@
 
   <!-- Layanan: Jasa Kontraktor Rumah -->
   <url>
-    <loc>https://jasabangunrumah.my.id/layanan/jasa-kontraktor-rumah.html</loc>
+    <loc>https://jasabangunrumah.my.id/layanan/jasa-kontraktor-rumah</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -35,7 +35,7 @@
 
   <!-- Layanan: Jasa Kontraktor Bangunan -->
   <url>
-    <loc>https://jasabangunrumah.my.id/layanan/jasa-kontraktor-bangunan.html</loc>
+    <loc>https://jasabangunrumah.my.id/layanan/jasa-kontraktor-bangunan</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -43,7 +43,7 @@
 
   <!-- Layanan: Jasa Renovasi Bangunan/Gedung -->
   <url>
-    <loc>https://jasabangunrumah.my.id/layanan/jasa-renovasi-bangunan-gedung.html</loc>
+    <loc>https://jasabangunrumah.my.id/layanan/jasa-renovasi-bangunan-gedung</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -51,7 +51,7 @@
 
   <!-- Layanan: Jasa Desain Interior -->
   <url>
-    <loc>https://jasabangunrumah.my.id/layanan/jasa-desain-interior.html</loc>
+    <loc>https://jasabangunrumah.my.id/layanan/jasa-desain-interior</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -59,7 +59,7 @@
 
   <!-- Layanan: Lainnya -->
   <url>
-    <loc>https://jasabangunrumah.my.id/layanan/lainnya.html</loc>
+    <loc>https://jasabangunrumah.my.id/layanan/lainnya</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -67,7 +67,7 @@
 
   <!-- Galeri -->
   <url>
-    <loc>https://jasabangunrumah.my.id/galeri.html</loc>
+    <loc>https://jasabangunrumah.my.id/galeri</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -75,7 +75,7 @@
 
   <!-- Blog -->
   <url>
-    <loc>https://jasabangunrumah.my.id/blog.html</loc>
+    <loc>https://jasabangunrumah.my.id/blog</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -83,70 +83,91 @@
 
   <!-- Blog: Detail Artikel -->
   <url>
-    <loc>https://jasabangunrumah.my.id/blog/membangun-rumah-sendiri-vs-kontraktor.html</loc>
+    <loc>https://jasabangunrumah.my.id/blog/membangun-rumah-sendiri-vs-kontraktor</loc>
     <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://jasabangunrumah.my.id/blog/cara-membuat-RAB-rumah.html</loc>
+    <loc>https://jasabangunrumah.my.id/blog/cara-membuat-RAB-rumah</loc>
     <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://jasabangunrumah.my.id/blog/jasa-arsitek-jakarta.html</loc>
+    <loc>https://jasabangunrumah.my.id/blog/jasa-arsitek-jakarta</loc>
     <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://jasabangunrumah.my.id/blog/jasa-arsitek-rumah-profesional.html</loc>
+    <loc>https://jasabangunrumah.my.id/blog/jasa-arsitek-rumah-profesional</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://jasabangunrumah.my.id/blog/biaya-jasa-arsitek-rumah.html</loc>
+    <loc>https://jasabangunrumah.my.id/blog/biaya-jasa-arsitek-rumah</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://jasabangunrumah.my.id/blog/inspirasi-desain-arsitektur-modern-minimalis.html</loc>
+    <loc>https://jasabangunrumah.my.id/blog/inspirasi-desain-arsitektur-modern-minimalis</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://jasabangunrumah.my.id/blog/persiapan-konsultasi-jasa-arsitek.html</loc>
+    <loc>https://jasabangunrumah.my.id/blog/persiapan-konsultasi-jasa-arsitek</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://jasabangunrumah.my.id/blog/desain-rumah-minimalis.html</loc>
+    <loc>https://jasabangunrumah.my.id/blog/desain-rumah-minimalis</loc>
     <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://jasabangunrumah.my.id/blog/bata-merah-vs-hebel.html</loc>
+    <loc>https://jasabangunrumah.my.id/blog/bata-merah-vs-hebel</loc>
     <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://jasabangunrumah.my.id/blog/jasa-renovasi-rumah-jakarta.html</loc>
+    <loc>https://jasabangunrumah.my.id/blog/jasa-renovasi-rumah-jakarta</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://jasabangunrumah.my.id/blog/tanda-rumah-harus-direnovasi</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://jasabangunrumah.my.id/blog/beda-arsitek-dan-drafter</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://jasabangunrumah.my.id/blog/jasa-kontraktor-rumah-jakarta</loc>
     <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
