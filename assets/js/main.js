@@ -80,12 +80,75 @@ document.addEventListener("DOMContentLoaded", function () {
    * Pagination Blog (halaman blog.html)
    */
   var blogItems = document.querySelectorAll(".blog-list-card");
-  var paginationLinks = document.querySelectorAll(".pagination .page-link");
+  var paginationContainer = document.getElementById("blogPagination");
   var itemsPerPage = 5;
   var currentPage = 1;
 
-  if (blogItems.length > 0 && paginationLinks.length > 0) {
+  if (blogItems.length > 0 && paginationContainer) {
     var totalPages = Math.ceil(blogItems.length / itemsPerPage);
+
+    function renderPagination() {
+      paginationContainer.innerHTML = "";
+
+      // Previous Button
+      var prevLi = document.createElement("li");
+      prevLi.className = "page-item" + (currentPage === 1 ? " disabled" : "");
+      prevLi.innerHTML = '<a class="page-link" href="#" tabindex="-1" aria-disabled="' + (currentPage === 1) + '">Sebelumnya</a>';
+      prevLi.addEventListener("click", function(e) {
+        e.preventDefault();
+        if (currentPage > 1) {
+          currentPage--;
+          showPage(currentPage);
+        }
+      });
+      paginationContainer.appendChild(prevLi);
+
+      // Page Numbers
+      var maxPagesToShow = 5;
+      var startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow / 2));
+      var endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
+
+      if (endPage - startPage + 1 < maxPagesToShow) {
+        startPage = Math.max(1, endPage - maxPagesToShow + 1);
+      }
+
+      for (var i = startPage; i <= endPage; i++) {
+        var pageLi = document.createElement("li");
+        pageLi.className = "page-item" + (i === currentPage ? " active" : "");
+        if (i === currentPage) {
+          pageLi.setAttribute("aria-current", "page");
+        }
+        
+        var pageLink = document.createElement("a");
+        pageLink.className = "page-link page-num";
+        pageLink.href = "#";
+        pageLink.textContent = i;
+        
+        (function(pageNum) {
+          pageLink.addEventListener("click", function(e) {
+            e.preventDefault();
+            currentPage = pageNum;
+            showPage(currentPage);
+          });
+        })(i);
+
+        pageLi.appendChild(pageLink);
+        paginationContainer.appendChild(pageLi);
+      }
+
+      // Next Button
+      var nextLi = document.createElement("li");
+      nextLi.className = "page-item" + (currentPage === totalPages ? " disabled" : "");
+      nextLi.innerHTML = '<a class="page-link" href="#">Berikutnya</a>';
+      nextLi.addEventListener("click", function(e) {
+        e.preventDefault();
+        if (currentPage < totalPages) {
+          currentPage++;
+          showPage(currentPage);
+        }
+      });
+      paginationContainer.appendChild(nextLi);
+    }
 
     function showPage(page) {
       var start = (page - 1) * itemsPerPage;
@@ -99,69 +162,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-      // Update active state on pagination
-      document.querySelectorAll(".pagination .page-item").forEach(function (li) {
-        li.classList.remove("active");
-        li.classList.remove("disabled");
-      });
+      renderPagination();
 
-      // Handle Previous button
-      var prevBtn = document.querySelector(".pagination .page-item:first-child");
-      if (page === 1) {
-        prevBtn.classList.add("disabled");
+      // Scroll to top of blog section
+      var blogSection = document.getElementById("blog-heading");
+      if (blogSection) {
+        var yOffset = -100; 
+        var y = blogSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({top: y, behavior: 'smooth'});
       }
-
-      // Handle Next button
-      var nextBtn = document.querySelector(".pagination .page-item:last-child");
-      if (page === totalPages) {
-        nextBtn.classList.add("disabled");
-      }
-
-      // Handle Number buttons
-      document.querySelectorAll(".pagination .page-item").forEach(function (li, index) {
-        if (index > 0 && index <= totalPages) {
-          if (index === page) {
-            li.classList.add("active");
-          }
-        }
-      });
     }
 
     // Initialize first page
     showPage(currentPage);
-
-    // Add click events to pagination links
-    paginationLinks.forEach(function (link) {
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-        var text = this.textContent.trim();
-
-        if (text === "Sebelumnya") {
-          if (currentPage > 1) {
-            currentPage--;
-            showPage(currentPage);
-          }
-        } else if (text === "Berikutnya") {
-          if (currentPage < totalPages) {
-            currentPage++;
-            showPage(currentPage);
-          }
-        } else {
-          var pageNum = parseInt(text);
-          if (!isNaN(pageNum)) {
-            currentPage = pageNum;
-            showPage(currentPage);
-          }
-        }
-        
-        // Scroll to top of blog section
-        var blogSection = document.getElementById("blog-heading");
-        if (blogSection) {
-          var yOffset = -100; 
-          var y = blogSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          window.scrollTo({top: y, behavior: 'smooth'});
-        }
-      });
-    });
   }
 });
