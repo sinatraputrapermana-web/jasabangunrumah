@@ -83,6 +83,27 @@
 
   <!-- Blog: Detail Artikel -->
   <url>
+    <loc>https://jasabangunrumah.my.id/blog/jasa-pengurusan-IMB-jakarta</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://jasabangunrumah.my.id/blog/cara-kerja-kontraktor-borongan</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://jasabangunrumah.my.id/blog/desain-facade-rumah</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
     <loc>https://jasabangunrumah.my.id/blog/membangun-rumah-sendiri-vs-kontraktor</loc>
     <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
