@@ -76,12 +76,33 @@
   <!-- Blog -->
   <url>
     <loc>https://jasabangunrumah.my.id/blog</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Blog: Detail Artikel -->
+  <url>
+    <loc>https://jasabangunrumah.my.id/blog/arsitektur-rumah-industrial</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://jasabangunrumah.my.id/blog/jasa-renovasi-ruko-surabaya</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://jasabangunrumah.my.id/blog/kontraktor-rumah-vs-tukang-harian</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <url>
     <loc>https://jasabangunrumah.my.id/blog/biaya-jasa-arsitek</loc>
     <lastmod>2026-09-05</lastmod>
