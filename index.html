@@ -84,8 +84,9 @@
   <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"></noscript>
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Custom CSS — non-blocking -->
+  <link rel="preload" as="style" href="assets/css/style.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
 
   <!-- Data Terstruktur (Schema.org) — membantu Google memahami jenis bisnis -->
   <script type="application/ld+json">
@@ -211,9 +212,9 @@
             <div class="wg-frame">
               <img src="assets/img/section-about.webp"
                    srcset="assets/img/section-about.webp 1000w"
-                   sizes="(max-width: 576px) calc(100vw - 3rem), (max-width: 992px) calc(50vw - 2rem), 400px"
+                   sizes="(max-width: 576px) calc(100vw - 3rem), (max-width: 992px) calc(50vw - 2rem), 588px"
                    alt="Tim arsitek Jasa Bangun Rumah sedang meninjau gambar kerja di lokasi proyek"
-                   class="img-fluid" loading="lazy" width="400" height="500">
+                   class="img-fluid" loading="lazy" width="588" height="392">
             </div>
           </div>
 

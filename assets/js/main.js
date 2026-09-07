@@ -8,15 +8,17 @@ document.addEventListener("DOMContentLoaded", function () {
   var isMenuOpen = false;
 
   function toggleNavbarBackground() {
-    // Baca scrollY sekali untuk menghindari forced reflow berulang
-    var scrolled = window.scrollY > 60 || isMenuOpen;
-    var hasClass = mainNav.classList.contains("navbar-scrolled");
-    // Hanya ubah DOM jika state benar-benar berubah
-    if (scrolled && !hasClass) {
-      mainNav.classList.add("navbar-scrolled");
-    } else if (!scrolled && hasClass) {
-      mainNav.classList.remove("navbar-scrolled");
-    }
+    window.requestAnimationFrame(function() {
+      // Baca scrollY sekali untuk menghindari forced reflow berulang
+      var scrolled = window.scrollY > 60 || isMenuOpen;
+      var hasClass = mainNav.classList.contains("navbar-scrolled");
+      // Hanya ubah DOM jika state benar-benar berubah
+      if (scrolled && !hasClass) {
+        mainNav.classList.add("navbar-scrolled");
+      } else if (!scrolled && hasClass) {
+        mainNav.classList.remove("navbar-scrolled");
+      }
+    });
   }
 
   // Jalankan sekali saat load, lalu setiap kali user scroll
