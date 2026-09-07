@@ -30,8 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Jalankan sekali saat load, lalu setiap kali user scroll
-  toggleNavbarBackground();
+  // Jalankan sekali saat load (ditunda agar tidak memicu forced reflow dengan script lain)
+  window.requestAnimationFrame(function() {
+    toggleNavbarBackground();
+  });
   window.addEventListener("scroll", toggleNavbarBackground, { passive: true });
 
   // Tambahkan background saat menu mobile dibuka
