@@ -60,8 +60,8 @@ a { text-decoration: none; }
   font-size: 0.8rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--wg-bronze);
-  font-weight: 500;
+  color: #8c6526; /* darkened bronze for WCAG AA contrast on light bg */
+  font-weight: 600;
   margin-bottom: 0.75rem;
 }
 
@@ -94,13 +94,13 @@ section { padding: 6rem 0; }
 .btn { border-radius: var(--radius-soft); padding: 0.75rem 1.75rem; font-weight: 500; letter-spacing: 0.03em; transition: var(--transition-base); }
 
 .btn-bronze {
-  background-color: var(--wg-bronze);
-  border: 1px solid var(--wg-bronze);
+  background-color: #8c6526; /* darkened for WCAG AA contrast on light backgrounds */
+  border: 1px solid #8c6526;
   color: #fff;
 }
 .btn-bronze:hover, .btn-bronze:focus {
-  background-color: var(--wg-bronze-deep);
-  border-color: var(--wg-bronze-deep);
+  background-color: #6e4e1c;
+  border-color: #6e4e1c;
   color: #fff;
 }
 
@@ -192,11 +192,12 @@ section { padding: 6rem 0; }
    ------------------------------------------------------------------------- */
 .hero-section {
   position: relative;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
-  background: url("../img/hero.webp") center center / cover no-repeat fixed;
+  background: url("../img/hero.webp") center center / cover no-repeat;
   isolation: isolate;
+  contain: layout style;
 }
 
 .hero-overlay {
@@ -212,7 +213,7 @@ section { padding: 6rem 0; }
 }
 
 .hero-eyebrow {
-  color: var(--wg-bronze);
+  color: #d4a855; /* lighter bronze for WCAG AA on dark overlay */
   text-transform: uppercase;
   letter-spacing: 0.3em;
   font-size: 0.8rem;
@@ -296,6 +297,13 @@ section { padding: 6rem 0; }
 .feature-item h3 { font-size: 1.05rem; margin-bottom: 0.35rem; }
 .feature-item p { font-size: 0.92rem; color: #4a4845; margin: 0; }
 
+/* On dark backgrounds, restore original bronze for eyebrow (sufficient contrast on dark) */
+.services-section .section-eyebrow,
+.process-section .section-eyebrow,
+.cta-section .section-eyebrow {
+  color: var(--wg-bronze);
+}
+
 /* -------------------------------------------------------------------------
    8. LAYANAN (SERVICES)
    ------------------------------------------------------------------------- */
@@ -333,10 +341,10 @@ section { padding: 6rem 0; }
 .stat-item .stat-number {
   font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 2.75rem);
-  color: var(--wg-bronze);
+  color: #7a5520; /* darkened for WCAG AA on ivory-soft bg */
   font-weight: 600;
 }
-.stat-item .stat-label { font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; color: #4a4845; }
+.stat-item .stat-label { font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; color: #3a3835; }
 
 /* -------------------------------------------------------------------------
    10. PORTOFOLIO / GALERI
@@ -354,7 +362,8 @@ section { padding: 6rem 0; }
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--wg-bronze);
+  color: #7a5520; /* darkened for WCAG AA contrast */
+  font-weight: 600;
 }
 .portfolio-caption h3 { font-size: 1.1rem; margin: 0.25rem 0 0; }
 
@@ -366,7 +375,7 @@ section { padding: 6rem 0; }
 .process-step .step-number {
   font-family: var(--font-display);
   font-size: 2.75rem;
-  color: rgba(180, 134, 58, 0.35);
+  color: rgba(180, 134, 58, 0.75); /* increased opacity for WCAG AA on charcoal bg */
   font-weight: 600;
   line-height: 1;
   margin-bottom: 0.75rem;
@@ -414,7 +423,7 @@ section { padding: 6rem 0; }
 .blog-card:hover img {
   transform: scale(1.05);
 }
-.blog-card .blog-meta { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--wg-bronze); }
+.blog-card .blog-meta { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: #7a5520; font-weight: 600; }
 .blog-card h3 { font-size: 1.1rem; margin: 0.5rem 0 0.75rem; transition: var(--transition-base); }
 .blog-card:hover h3 { color: var(--wg-bronze); }
 .blog-card p { font-size: 0.9rem; color: #4a4845; }
@@ -477,8 +486,8 @@ section { padding: 6rem 0; }
 .footer-social a:hover { border-color: var(--wg-bronze); color: var(--wg-bronze); }
 
 .site-footer hr { border-color: rgba(201,191,174,0.15); margin: 3rem 0 1.5rem; }
-.footer-bottom { font-size: 0.82rem; color: #6b6863; padding-bottom: 1.5rem; }
-.footer-bottom a { color: #6b6863; }
+.footer-bottom { font-size: 0.82rem; color: #a09c97; padding-bottom: 1.5rem; } /* lightened for WCAG AA on charcoal */
+.footer-bottom a { color: #a09c97; }
 .footer-bottom a:hover { color: var(--wg-bronze); }
 
 /* Touch targets — min 44x44px untuk aksesibilitas mobile */
@@ -487,7 +496,15 @@ section { padding: 6rem 0; }
   min-height: 44px;
   display: inline-flex;
   align-items: center;
-  padding: 0.5rem 0.25rem;
+  padding: 0.5rem 0.75rem;
+}
+
+/* Footer address links — touch target fix */
+.site-footer address a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.25rem 0;
 }
 
 .floating-wa,
