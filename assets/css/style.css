@@ -192,12 +192,11 @@ section { padding: 6rem 0; }
    ------------------------------------------------------------------------- */
 .hero-section {
   position: relative;
-  min-height: 100svh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   background: url("../img/hero.webp") center center / cover no-repeat;
   isolation: isolate;
-  contain: layout style;
 }
 
 .hero-overlay {
@@ -207,7 +206,15 @@ section { padding: 6rem 0; }
   z-index: -1;
 }
 
-.hero-content { color: #fff; max-width: 780px; padding-top: 4rem; }
+.hero-content { 
+  color: #fff; 
+  max-width: 780px; 
+  padding-top: 4rem; 
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 @media (max-width: 768px) {
   .hero-content { padding-left: 1.5rem; padding-right: 1.5rem; }
 }

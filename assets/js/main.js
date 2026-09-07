@@ -7,18 +7,27 @@ document.addEventListener("DOMContentLoaded", function () {
   var mainNav = document.getElementById("mainNav");
   var isMenuOpen = false;
 
+  var ticking = false;
+  var currentScrollY = 0;
+
+  function updateNavbar() {
+    var scrolled = currentScrollY > 60 || isMenuOpen;
+    var hasClass = mainNav.classList.contains("navbar-scrolled");
+    
+    if (scrolled && !hasClass) {
+      mainNav.classList.add("navbar-scrolled");
+    } else if (!scrolled && hasClass) {
+      mainNav.classList.remove("navbar-scrolled");
+    }
+    ticking = false;
+  }
+
   function toggleNavbarBackground() {
-    window.requestAnimationFrame(function() {
-      // Baca scrollY sekali untuk menghindari forced reflow berulang
-      var scrolled = window.scrollY > 60 || isMenuOpen;
-      var hasClass = mainNav.classList.contains("navbar-scrolled");
-      // Hanya ubah DOM jika state benar-benar berubah
-      if (scrolled && !hasClass) {
-        mainNav.classList.add("navbar-scrolled");
-      } else if (!scrolled && hasClass) {
-        mainNav.classList.remove("navbar-scrolled");
-      }
-    });
+    currentScrollY = window.scrollY;
+    if (!ticking) {
+      window.requestAnimationFrame(updateNavbar);
+      ticking = true;
+    }
   }
 
   // Jalankan sekali saat load, lalu setiap kali user scroll
@@ -39,12 +48,24 @@ document.addEventListener("DOMContentLoaded", function () {
    * Back to Top Button
    */
   var backToTopBtn = document.getElementById("backToTop");
+  var bttTicking = false;
+  var bttScrollY = 0;
+
+  function updateBackToTop() {
+    if (bttScrollY > 300) {
+      backToTopBtn.classList.add("show");
+    } else {
+      backToTopBtn.classList.remove("show");
+    }
+    bttTicking = false;
+  }
+
   if (backToTopBtn) {
     window.addEventListener("scroll", function () {
-      if (window.scrollY > 300) {
-        backToTopBtn.classList.add("show");
-      } else {
-        backToTopBtn.classList.remove("show");
+      bttScrollY = window.scrollY;
+      if (!bttTicking) {
+        window.requestAnimationFrame(updateBackToTop);
+        bttTicking = true;
       }
     }, { passive: true });
 
