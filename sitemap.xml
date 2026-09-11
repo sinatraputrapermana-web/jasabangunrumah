@@ -76,12 +76,26 @@
   <!-- Blog -->
   <url>
     <loc>https://jasabangunrumah.my.id/blog</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Blog: Detail Artikel -->
+  <url>
+    <loc>https://jasabangunrumah.my.id/blog/jasa-renovasi-rumah-jakarta-2026</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://jasabangunrumah.my.id/blog/kontraktor-rumah-jakarta</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <url>
     <loc>https://jasabangunrumah.my.id/blog/biaya-bangun-rumah-jakarta</loc>
     <lastmod>2026-09-10</lastmod>
