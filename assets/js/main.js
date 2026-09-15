@@ -113,12 +113,24 @@ document.addEventListener("DOMContentLoaded", function () {
     var totalPages = Math.ceil(blogItems.length / itemsPerPage);
 
     function renderPagination() {
-      paginationContainer.innerHTML = "";
+      while (paginationContainer.firstChild) {
+        paginationContainer.removeChild(paginationContainer.firstChild);
+      }
 
       // Previous Button
       var prevLi = document.createElement("li");
       prevLi.className = "page-item" + (currentPage === 1 ? " disabled" : "");
-      prevLi.innerHTML = '<a class="page-link" href="#" tabindex="-1" aria-disabled="' + (currentPage === 1) + '">Sebelumnya</a>';
+
+      var prevLink = document.createElement("a");
+      prevLink.className = "page-link";
+      prevLink.href = "#";
+      prevLink.textContent = "Sebelumnya";
+      prevLink.setAttribute("aria-disabled", currentPage === 1 ? "true" : "false");
+      if (currentPage === 1) {
+        prevLink.setAttribute("tabindex", "-1");
+      }
+
+      prevLi.appendChild(prevLink);
       prevLi.addEventListener("click", function(e) {
         e.preventDefault();
         if (currentPage > 1) {
@@ -164,7 +176,17 @@ document.addEventListener("DOMContentLoaded", function () {
       // Next Button
       var nextLi = document.createElement("li");
       nextLi.className = "page-item" + (currentPage === totalPages ? " disabled" : "");
-      nextLi.innerHTML = '<a class="page-link" href="#">Berikutnya</a>';
+
+      var nextLink = document.createElement("a");
+      nextLink.className = "page-link";
+      nextLink.href = "#";
+      nextLink.textContent = "Berikutnya";
+      nextLink.setAttribute("aria-disabled", currentPage === totalPages ? "true" : "false");
+      if (currentPage === totalPages) {
+        nextLink.setAttribute("tabindex", "-1");
+      }
+
+      nextLi.appendChild(nextLink);
       nextLi.addEventListener("click", function(e) {
         e.preventDefault();
         if (currentPage < totalPages) {
