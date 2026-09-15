@@ -76,12 +76,26 @@
   <!-- Blog -->
   <url>
     <loc>https://jasabangunrumah.my.id/blog</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Blog: Detail Artikel -->
+  <url>
+    <loc>https://jasabangunrumah.my.id/blog/tipe-desain-rumah-surabaya</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://jasabangunrumah.my.id/blog/pondasi-tanah-gerak-surabaya</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <url>
     <loc>https://jasabangunrumah.my.id/blog/kontraktor-berizin-surabaya</loc>
     <lastmod>2026-09-14</lastmod>
