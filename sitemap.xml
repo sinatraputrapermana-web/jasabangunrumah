@@ -83,6 +83,20 @@
 
   <!-- Blog: Detail Artikel -->
   <url>
+    <loc>https://jasabangunrumah.my.id/blog/struktur-ruko-makassar</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://jasabangunrumah.my.id/blog/desain-ruko-minimalis-makassar</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
     <loc>https://jasabangunrumah.my.id/blog/jasa-kontraktor-bangunan-makassar</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
