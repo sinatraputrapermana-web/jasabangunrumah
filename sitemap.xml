@@ -83,6 +83,13 @@
 
   <!-- Blog: Detail Artikel -->
   <url>
+    <loc>https://jasabangunrumah.my.id/blog/biaya-kontraktor-ruko</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
     <loc>https://jasabangunrumah.my.id/blog/struktur-ruko-makassar</loc>
     <lastmod>2026-09-21</lastmod>
     <changefreq>monthly</changefreq>
