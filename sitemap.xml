@@ -76,12 +76,19 @@
   <!-- Blog -->
   <url>
     <loc>https://jasabangunrumah.my.id/blog</loc>
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Blog: Detail Artikel -->
+  <url>
+    <loc>https://jasabangunrumah.my.id/blog/jasa-bangun-rumah-subsidi</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <url>
     <loc>https://jasabangunrumah.my.id/blog/desain-atap-rumah-curah-hujan-tinggi</loc>
     <lastmod>2026-09-24</lastmod>
