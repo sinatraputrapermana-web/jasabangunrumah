@@ -83,6 +83,13 @@
 
   <!-- Blog: Detail Artikel -->
   <url>
+    <loc>https://jasabangunrumah.my.id/blog/arsitek-rumah-minimalis-sentul-bogor</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://jasabangunrumah.my.id/blog/syarat-renovasi-rumah-subsidi</loc>
     <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
