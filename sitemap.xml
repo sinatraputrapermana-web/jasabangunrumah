@@ -83,6 +83,13 @@
 
   <!-- Blog: Detail Artikel -->
   <url>
+    <loc>https://jasabangunrumah.my.id/blog/kusen-aluminium-vs-kusen-kayu</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://jasabangunrumah.my.id/blog/harga-pasang-kusen-aluminium-per-meter</loc>
     <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
